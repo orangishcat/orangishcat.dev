@@ -69,7 +69,11 @@ function setAvifFormat(parent) {
   for (const child of parent.children) {
     if (child.type === "element" && child.tagName === "img") {
       child.properties ??= {};
-      child.properties.format = "avif";
+      const src = String(child.properties.src ?? "").split(/[?#]/, 1)[0];
+      // don't process apngs
+      if (!/\.(apng|gif|svg)$/i.test(src)) {
+        child.properties.format = "avif";
+      }
     }
 
     setAvifFormat(child);
