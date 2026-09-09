@@ -15,7 +15,9 @@ Besides, blog hosting (e.g. Medium) feels very predatory these days. Large compa
 
 ## Joining Neocities
 
-This site is dual hosted on https://orangishcat.github.io and https://orangishcat.neocities.org.
+~~This site is dual hosted on https://orangishcat.github.io and https://orangishcat.neocities.org.~~
+
+Edit 2026/9/9: Now only hosted on Neocities, using my domain https://orangishcat.dev.
 
 I usually use Neocities as it gives me a view counter, and number go up make me happy.
 

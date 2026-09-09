@@ -14,10 +14,12 @@ TITLE_RE = re.compile("---\ntitle: (.+)\n---", re.MULTILINE | re.DOTALL)
 IMAGE_RE = re.compile(r"!\[\[.\/attachments\/(.+)\]\]")
 WIDTH_RE = re.compile(r"\|\d+")
 
+
 def to_asset_url(match):
     filename = WIDTH_RE.sub("", match.group(1))
-    url = f"https://github.com/orangishcat/orangishcat.github.io/raw/refs/heads/main/src/content/blog/{START_FOLDER}/attachments/{filename}"
+    url = f"https://github.com/orangishcat/orangishcat.dev/raw/refs/heads/main/src/content/blog/{START_FOLDER}/attachments/{filename}"
     return f"![{filename}]({url})"
+
 
 def read_file(filename: Path):
     with open(START_DIR / filename) as f:
@@ -28,6 +30,7 @@ def read_file(filename: Path):
     file_content = TITLE_RE.sub("", file_content)
     file_content = IMAGE_RE.sub(to_asset_url, file_content)
     return f"# {file_title}\n{file_content}"
+
 
 files = natsorted(START_DIR.glob("*.md"))
 with open(PROJECT_DIR / "out.md", "w") as w:

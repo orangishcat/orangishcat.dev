@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orangishcat.github.io/sitemap-index.xml
+Sitemap: https://orangishcat.dev/sitemap-index.xml

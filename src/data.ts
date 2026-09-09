@@ -21,7 +21,7 @@ export const projects = [
     title: "Page Proxy",
     description:
       "A Chrome/Firefox extension that streamlines the process of creating userscripts.",
-    url: "https://orangishcat.github.io/page-proxy/",
+    url: "https://orangishcat.dev/page-proxy/",
   },
   {
     title: "Tanks: the Crusades",

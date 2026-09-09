@@ -16,4 +16,4 @@ Most importantly:
 
 Looking back, I'm quite surprised at just how terrible the earliest drawings were, and how easily I managed to make the later ones. Such is the importance of learning new skills. It's fun and also very rewarding!
 
-Alright, the final finished website is on https://orangishcat.github.io. Next are all my devlogs, fully unedited. I highly recommend giving them a read, it feels like I became a totally different person after the project.
+Alright, the final finished website is on https://orangishcat.dev. Next are all my devlogs, fully unedited. I highly recommend giving them a read, it feels like I became a totally different person after the project.
