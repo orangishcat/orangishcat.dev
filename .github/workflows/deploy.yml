@@ -32,15 +32,6 @@ jobs:
       - name: Build project
         run: bun run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: dist
-
-      - name: Deploy to Pages
-        uses: actions/deploy-pages@v5
-        id: deployment
-
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
         with:
