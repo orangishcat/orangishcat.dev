@@ -314,8 +314,11 @@ import { projects, blogs } from "../data.ts";
             <video
               autoplay
               muted
-              src={gameplay}
-              class="absolute top-[22%] left-[25%] w-[58%]"></video>
+              playsinline
+              class="absolute top-[22%] left-[25%] w-[58%]"
+            >
+              <source src={gameplay} type="video/webm" /></video
+            >
           </div>
         </div>
       </div>
