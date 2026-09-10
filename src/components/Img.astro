@@ -1,0 +1,33 @@
+---
+import {
+  Image,
+  type LocalImageProps,
+  type RemoteImageProps,
+} from "astro:assets";
+
+type Defaults = "alt" | "draggable" | "format";
+type Props = Omit<LocalImageProps, Defaults> | Omit<RemoteImageProps, Defaults>;
+
+const { src: source, ...props } = Astro.props;
+const resolved = await source;
+const src =
+  typeof resolved === "object" && "default" in resolved
+    ? resolved.default
+    : resolved;
+const local = typeof src === "object";
+const url = local ? src.src : src;
+let filename = decodeURIComponent(url.split(/[?#]/)[0].split("/").pop() ?? "");
+// Astro adds a content hash before the extension of imported production assets.
+if (local && import.meta.env.PROD) {
+  filename = filename.replace(/\.[^.]+(?=\.[^.]+$)/, "");
+}
+const format = local ? src.format : filename.split(".").pop()?.toLowerCase();
+---
+
+<Image
+  {...props}
+  src={src}
+  draggable="false"
+  alt={filename}
+  format={format === "apng" || format === "gif" ? undefined : "avif"}
+/>

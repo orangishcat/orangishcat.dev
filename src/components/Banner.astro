@@ -1,12 +1,13 @@
 ---
+import Img from "./Img.astro";
+import neonBannerImage from "../assets/neon banner.apng";
 import A from "../components/Anchor.astro";
 ---
 
 <A href="/" class="hover:brightness-100!">
   <div class="flex justify-center m-8">
-    <img
-      draggable="false"
-      src="/assets/neon banner.apng"
+    <Img
+      src={neonBannerImage}
       class="w-full max-w-120 hover:brightness-90"
     />
   </div>

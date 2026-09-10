@@ -1,4 +1,28 @@
 ---
+import Img from "../components/Img.astro";
+import plantImage from "../assets/plant.avif";
+import githubImage from "../assets/socials icons/github.avif";
+import redditImage from "../assets/socials icons/reddit.avif";
+import neocitiesImage from "../assets/socials icons/neocities.avif";
+import clockImage from "../assets/clock.apng";
+import bookImage from "../assets/book.apng";
+import minecraftImage from "../assets/game icons/minecraft.avif";
+import osuImage from "../assets/game icons/osu.avif";
+import geometryDashImage from "../assets/game icons/geometry dash.avif";
+import ttcImage from "../assets/game icons/ttc.avif";
+import deltaruneImage from "../assets/game icons/deltarune.avif";
+import undertaleImage from "../assets/game icons/undertale.avif";
+import estellaImage from "../assets/game icons/estella.avif";
+import undertaleYellowImage from "../assets/game icons/undertale yellow.avif";
+import celesteImage from "../assets/game icons/celeste.avif";
+import oneshotImage from "../assets/game icons/oneshot.avif";
+import omoriImage from "../assets/game icons/omori.avif";
+import rainWorldImage from "../assets/game icons/rain world.avif";
+import hollowKnightImage from "../assets/game icons/hollow knight.avif";
+import silksongImage from "../assets/game icons/silksong.avif";
+import unbeatableImage from "../assets/game icons/unbeatable.avif";
+import computerImage from "../assets/computer.avif";
+import gameplay from "../assets/gameplay.webm?url";
 import Layout from "../layouts/Layout.astro";
 import A from "../components/Anchor.astro";
 import Banner from "../components/Banner.astro";
@@ -14,7 +38,7 @@ import { projects, blogs } from "../data.ts";
     >
       <!-- First column -->
       <div class="flex flex-col [&>div]:py-2 text-center relative">
-        <img draggable="false" src="/assets/plant.avif" class="-mb-1.5 z-10" />
+        <Img src={plantImage} class="-mb-1.5 z-10 w-full" />
         <div class="flex flex-col border border-gray-600 bg-background/80">
           <h2 class="border-b border-gray-600">Socials</h2>
           <div
@@ -22,30 +46,26 @@ import { projects, blogs } from "../data.ts";
           >
             <A href="https://github.com/orangishcat">
               <div>
-                <img src="/assets/socials icons/github.avif" />
+                <Img src={githubImage} />
                 <div>GitHub</div>
               </div>
             </A>
             <A href="https://www.reddit.com/user/Safe_Paper_9540/">
               <div>
-                <img src="/assets/socials icons/reddit.avif" />
+                <Img src={redditImage} />
                 <div>Reddit</div>
               </div>
             </A>
             <A href="https://neocities.org/site/orangishcat">
               <div>
-                <img src="/assets/socials icons/neocities.avif" />
+                <Img src={neocitiesImage} />
                 <div>Neocities</div>
               </div>
             </A>
           </div>
         </div>
         <div class="my-8"></div>
-        <img
-          draggable="false"
-          src="/assets/clock.apng"
-          class="w-1/2 mx-auto -mb-0.5 z-10"
-        />
+        <Img src={clockImage} class="w-1/2 mx-auto -mb-0.5 z-10" />
         <div class="border border-gray-600 bg-background/80 p-0!">
           <h2 class="mt-2">Projects</h2>
           <div class="text-left [&>a>div]:border-t [&>a>div]:border-gray-600">
@@ -74,7 +94,7 @@ import { projects, blogs } from "../data.ts";
           href="/blog/personal-website"
           class="absolute bottom-8 hover:scale-130 transition"
         >
-          <img draggable="false" src="/assets/book.apng" />
+          <Img src={bookImage} />
         </A>
         <br />
       </div>
@@ -189,24 +209,18 @@ import { projects, blogs } from "../data.ts";
             <h3>Games I like</h3>
             <div>
               <A href="https://www.minecraft.net/en-us">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/minecraft.avif"
-                />
+                <Img src={minecraftImage} />
               </A>
               <A href="https://osu.ppy.sh/">
-                <img draggable="false" src="/assets/game icons/osu.avif" />
+                <Img src={osuImage} />
               </A>
               <A href="https://geometrydash.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/geometry dash.avif"
-                />
+                <Img src={geometryDashImage} />
               </A>
               <A
                 href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
               >
-                <img draggable="false" src="/assets/game icons/ttc.avif" />
+                <Img src={ttcImage} />
               </A>
             </div>
           </div>
@@ -214,25 +228,16 @@ import { projects, blogs } from "../data.ts";
             <h3>Games I play occasionally</h3>
             <div>
               <A href="https://deltarune.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/deltarune.avif"
-                />
+                <Img src={deltaruneImage} />
               </A>
               <A href="https://undertale.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/undertale.avif"
-                />
+                <Img src={undertaleImage} />
               </A>
               <A href="https://estella.studio/">
-                <img draggable="false" src="/assets/game icons/estella.avif" />
+                <Img src={estellaImage} />
               </A>
               <A href="https://undertaleyellow.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/undertale yellow.avif"
-                />
+                <Img src={undertaleYellowImage} />
               </A>
             </div>
           </div>
@@ -240,34 +245,25 @@ import { projects, blogs } from "../data.ts";
             <h3>Games I want to try</h3>
             <div>
               <A href="https://www.celestegame.com/">
-                <img draggable="false" src="/assets/game icons/celeste.avif" />
+                <Img src={celesteImage} />
               </A>
               <A href="http://oneshot-game.com/">
-                <img draggable="false" src="/assets/game icons/oneshot.avif" />
+                <Img src={oneshotImage} />
               </A>
               <A href="https://www.omori-game.com/">
-                <img draggable="false" src="/assets/game icons/omori.avif" />
+                <Img src={omoriImage} />
               </A>
               <A href="https://rainworldgame.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/rain world.avif"
-                />
+                <Img src={rainWorldImage} />
               </A>
               <A href="https://hollowknight.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/hollow knight.avif"
-                />
+                <Img src={hollowKnightImage} />
               </A>
               <A href="https://hollowknightsilksong.com/">
-                <img draggable="false" src="/assets/game icons/silksong.avif" />
+                <Img src={silksongImage} />
               </A>
               <A href="https://www.unbeatablegame.com/">
-                <img
-                  draggable="false"
-                  src="/assets/game icons/unbeatable.avif"
-                />
+                <Img src={unbeatableImage} />
               </A>
             </div>
             <p>Lots of cool games out there!</p>
@@ -314,11 +310,11 @@ import { projects, blogs } from "../data.ts";
         <br />
         <div class="absolute bottom-20 right-0 w-full">
           <div class="w-full relative">
-            <img draggable="false" src="/assets/computer.avif" class="w-full" />
+            <Img src={computerImage} class="w-full" />
             <video
               autoplay
               muted
-              src="https://github.com/orangishcat/orangishcat.dev/blob/main/public/assets/gameplay.webm?raw=true"
+              src={gameplay}
               class="absolute top-[22%] left-[25%] w-[58%]"></video>
           </div>
         </div>

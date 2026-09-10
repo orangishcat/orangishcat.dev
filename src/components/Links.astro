@@ -1,10 +1,11 @@
 ---
+import Img from "./Img.astro";
+import catImage from "../assets/cat.apng";
 import A from "./Anchor.astro";
 ---
 
-<img
-  draggable="false"
-  src="/assets/cat.apng"
+<Img
+  src={catImage}
   class="-mb-1.5 mt-[-75%] z-10 w-full"
 />
 <div

@@ -1,3 +1,5 @@
+import onekoSprite from "./assets/oneko.gif?url";
+
 // oneko.js: https://github.com/adryd325/oneko.js
 
 (function oneko() {
@@ -86,7 +88,7 @@
   };
 
   function init() {
-    let nekoFile = "/oneko.gif";
+    let nekoFile = onekoSprite;
     const curScript = document.currentScript;
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat;

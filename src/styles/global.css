@@ -14,7 +14,7 @@ body {
   @apply text-base text-white bg-background-dark min-h-screen w-full m-0;
   image-rendering: pixelated;
   font-family: "Geist Pixel", sans-serif;
-  background-image: url("/assets/bg.avif"), url("/assets/stars only.avif");
+  background-image: url("../assets/bg.avif"), url("../assets/stars only.avif");
   background-position:
     center top,
     center 64px;
