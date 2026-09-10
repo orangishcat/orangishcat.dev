@@ -6,7 +6,7 @@ all art is drawn by me! brand logos (e.g. gitHub, reddit, neocities) are downsca
 
 this site is hosted on neocities using my domain https://orangishcat.dev! It is
 
-ai usage: only for [remark-obsidian-images.mjs](src/plugins/remark-obsidian-images.mjs) because making the plugin was hella annoying
+ai usage: only for the image remark plugin in `src/plugins`, cuz making the plugin was hella annoying
 everything else was coded by me, and i really enjoyed it! i hope you will enjoy it too
 
 License: ARR
