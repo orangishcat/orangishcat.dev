@@ -19,13 +19,13 @@ START_FOLDER = input("Enter start folder: ")
 PROJECT_DIR = Path(__file__).parent
 START_DIR = PROJECT_DIR / "src" / "content" / "blog" / START_FOLDER
 TITLE_RE = re.compile("---\ntitle: (.+)\n---", re.MULTILINE | re.DOTALL)
-IMAGE_RE = re.compile(r"!\[\[.\/attachments\/(.+)\]\]", re.IGNORECASE)
+IMAGE_RE = re.compile(r"!\[\[.\/(attachments)\/(.+)\]\]", re.IGNORECASE)
 WIDTH_RE = re.compile(r"\|\d+")
 
 
 def to_asset_url(match):
-    filename = WIDTH_RE.sub("", match.group(1))
-    url = f"https://github.com/orangishcat/orangishcat.dev/raw/refs/heads/main/src/content/blog/{START_FOLDER}/attachments/{filename}"
+    filename = WIDTH_RE.sub("", match.group(2))
+    url = f"https://github.com/orangishcat/orangishcat.dev/raw/refs/heads/main/src/content/blog/{START_FOLDER}/{match.group(1)}/{filename}"
     return f"![{filename}]({url})"
 
 
@@ -42,5 +42,9 @@ def read_file(filename: Path):
 
 files = natsorted(START_DIR.glob("*.md"))
 with open(path := PROJECT_DIR / "out.md", "w") as w:
+    print(
+        f"---\ncanonical_url: https://orangishcat.dev/blog/{START_FOLDER}\n---\n",
+        file=w,
+    )
     w.write("\n\n---\n\n".join(read_file(f) for f in files))
 print(f"Joined markdown file written to {path}")
