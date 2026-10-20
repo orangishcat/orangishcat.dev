@@ -101,7 +101,7 @@ import { projects, blogs } from "../data.ts";
 
       <!-- Second column -->
       <div
-        class="border-gray-600 border space-y-6 p-4 bg-background/80 content-area"
+        class="*:border-gray-600 *:border *:space-y-6 *:p-4 *:bg-background/80 space-y-3 content-area"
       >
         <div>
           <h2>About me</h2>
@@ -186,89 +186,92 @@ import { projects, blogs } from "../data.ts";
             though...
           </p>
         </div>
-        <h2>Games</h2>
-        <p>
-          I like:
-          <ul>
-            <li>
-              Indie games, especially those with good music and storylines!
-            </li>
-            <li>Rhythm games!</li>
-            <li>
-              And Minecraft, it's the game I grew up on and you can do just
-              about anything in it :D
-            </li>
-          </ul>
-        </p>
-        <div
-          class="space-y-6
+        <div>
+          <h2>Games</h2>
+          <p>
+            I like:
+            <ul>
+              <li>
+                Indie games, especially those with good music and storylines!
+              </li>
+              <li>Rhythm games!</li>
+              <li>
+                And Minecraft, it's the game I grew up on and you can do just
+                about anything in it :D
+              </li>
+            </ul>
+          </p>
+          <div
+            class="space-y-6
               [&>div>div]:grid [&>div>div]:grid-cols-5 [&>div>div]:content-stretch
               [&>div>div]:gap-3"
-        >
-          <div>
-            <h3>Games I like</h3>
+          >
             <div>
-              <A href="https://www.minecraft.net/en-us">
-                <Img src={minecraftImage} />
-              </A>
-              <A href="https://osu.ppy.sh/">
-                <Img src={osuImage} />
-              </A>
-              <A href="https://geometrydash.com/">
-                <Img src={geometryDashImage} />
-              </A>
-              <A
-                href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
-              >
-                <Img src={ttcImage} />
-              </A>
+              <h3>Games I like</h3>
+              <div>
+                <A href="https://www.minecraft.net/en-us">
+                  <Img src={minecraftImage} />
+                </A>
+                <A href="https://osu.ppy.sh/">
+                  <Img src={osuImage} />
+                </A>
+                <A href="https://geometrydash.com/">
+                  <Img src={geometryDashImage} />
+                </A>
+                <A
+                  href="https://store.steampowered.com/app/1660910/Tanks_The_Crusades/"
+                >
+                  <Img src={ttcImage} />
+                </A>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3>Games I play occasionally</h3>
             <div>
-              <A href="https://deltarune.com/">
-                <Img src={deltaruneImage} />
-              </A>
-              <A href="https://undertale.com/">
-                <Img src={undertaleImage} />
-              </A>
-              <A href="https://estella.studio/">
-                <Img src={estellaImage} />
-              </A>
-              <A href="https://undertaleyellow.com/">
-                <Img src={undertaleYellowImage} />
-              </A>
+              <h3>Games I play occasionally</h3>
+              <div>
+                <A href="https://deltarune.com/">
+                  <Img src={deltaruneImage} />
+                </A>
+                <A href="https://undertale.com/">
+                  <Img src={undertaleImage} />
+                </A>
+                <A href="https://estella.studio/">
+                  <Img src={estellaImage} />
+                </A>
+                <A href="https://undertaleyellow.com/">
+                  <Img src={undertaleYellowImage} />
+                </A>
+              </div>
             </div>
-          </div>
-          <div>
-            <h3>Games I want to try</h3>
             <div>
-              <A href="https://www.celestegame.com/">
-                <Img src={celesteImage} />
-              </A>
-              <A href="http://oneshot-game.com/">
-                <Img src={oneshotImage} />
-              </A>
-              <A href="https://www.omori-game.com/">
-                <Img src={omoriImage} />
-              </A>
-              <A href="https://rainworldgame.com/">
-                <Img src={rainWorldImage} />
-              </A>
-              <A href="https://hollowknight.com/">
-                <Img src={hollowKnightImage} />
-              </A>
-              <A href="https://hollowknightsilksong.com/">
-                <Img src={silksongImage} />
-              </A>
-              <A href="https://www.unbeatablegame.com/">
-                <Img src={unbeatableImage} />
-              </A>
+              <h3>Games I want to try</h3>
+              <div>
+                <A href="https://www.celestegame.com/">
+                  <Img src={celesteImage} />
+                </A>
+                <A href="http://oneshot-game.com/">
+                  <Img src={oneshotImage} />
+                </A>
+                <A href="https://www.omori-game.com/">
+                  <Img src={omoriImage} />
+                </A>
+                <A href="https://rainworldgame.com/">
+                  <Img src={rainWorldImage} />
+                </A>
+                <A href="https://hollowknight.com/">
+                  <Img src={hollowKnightImage} />
+                </A>
+                <A href="https://hollowknightsilksong.com/">
+                  <Img src={silksongImage} />
+                </A>
+                <A href="https://www.unbeatablegame.com/">
+                  <Img src={unbeatableImage} />
+                </A>
+              </div>
+              <p>Lots of cool games out there!</p>
             </div>
-            <p>Lots of cool games out there!</p>
           </div>
         </div>
+
         <div>
           <h2>The end</h2>
           <p>
