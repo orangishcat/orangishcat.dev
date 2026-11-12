@@ -16,7 +16,9 @@
     "@astrojs/mdx": "^8.0.3",
     "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/strftime": "^0.9.8",
     "astro": "^7.3.8",
+    "strftime": "^0.10.3",
     "svelte": "^5.57.2",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"

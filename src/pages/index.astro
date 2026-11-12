@@ -27,7 +27,8 @@ import Layout from "../layouts/Layout.astro";
 import A from "../components/Anchor.astro";
 import Banner from "../components/Banner.astro";
 import Links from "../components/Links.astro";
-import { projects, blogs } from "../data.ts";
+import { projects, blogs, coloredDate } from "../data.ts";
+import strftime from "strftime";
 ---
 
 <Layout>
@@ -295,7 +296,10 @@ import { projects, blogs } from "../data.ts";
                     <h3 class="text-[1.15rem]! line-clamp-2 group-hover:line-clamp-none w-full leading-5">
                       {obj.title}
                     </h3>
-                    <div class="mb-1 text-sm text-gray-300">({obj.date})</div>
+                    <div
+                      class="mb-1 text-sm text-gray-300"
+                      set:html={coloredDate(obj.dateCreated)}
+                    ></div>
                     <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
                       {obj.description}
                     </div>

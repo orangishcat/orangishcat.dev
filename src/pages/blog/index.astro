@@ -3,7 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import Banner from "../../components/Banner.astro";
 import Links from "../../components/Links.astro";
 import A from "../../components/Anchor.astro";
-import { blogs } from "../../data.ts";
+import { blogs, coloredDate } from "../../data.ts";
+import strftime from "strftime";
 ---
 
 <Layout title="Blog">
@@ -25,7 +26,10 @@ import { blogs } from "../../data.ts";
               <div class="hover:bg-background-light px-6 pt-3 pb-4 space-y-1">
                 <h3 class="text-[1.5rem]! leading-7">{obj.title} </h3>
                 <div class="text-[0.95rem] text-gray-200 mb-1.5">
-                  <span class="text-sm text-gray-400">({obj.date})</span>
+                  <span
+                    class="text-sm text-gray-400"
+                    set:html={coloredDate(obj.dateCreated)}
+                  />{" "}
                   {obj.description}
                 </div>
               </div>
