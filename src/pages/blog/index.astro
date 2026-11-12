@@ -23,13 +23,13 @@ import strftime from "strftime";
               href={`/blog/${obj.slug}`}
               class="hover:no-underline! hover:brightness-100!"
             >
-              <div class="hover:bg-background-light px-6 pt-3 pb-4 space-y-1">
+              <div class="hover:bg-background-light px-6 pt-3 pb-4 space-y-0.5">
                 <h3 class="text-[1.5rem]! leading-7">{obj.title} </h3>
                 <div class="text-[0.95rem] text-gray-200 mb-1.5">
-                  <span
-                    class="text-sm text-gray-400"
-                    set:html={coloredDate(obj.dateCreated)}
-                  />{" "}
+                  <div
+                    class="text-sm text-gray-400 mb-2"
+                    set:html={coloredDate(obj.datePublished)}
+                  />
                   {obj.description}
                 </div>
               </div>

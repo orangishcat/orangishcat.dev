@@ -27,7 +27,7 @@ import Layout from "../layouts/Layout.astro";
 import A from "../components/Anchor.astro";
 import Banner from "../components/Banner.astro";
 import Links from "../components/Links.astro";
-import { projects, blogs, coloredDate } from "../data.ts";
+import { projects, blogs, coloredDate, isRecent } from "../data.ts";
 import strftime from "strftime";
 ---
 
@@ -35,7 +35,7 @@ import strftime from "strftime";
   <div class="w-full h-full max-w-6xl mx-auto">
     <Banner />
     <div
-      class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-4 rounded-2xl mb-12"
+      class="grid grid-cols-[1fr_3fr_1fr] content-stretch justify-items-stretch gap-6 rounded-2xl mb-12"
     >
       <!-- First column -->
       <div class="flex flex-col [&>div]:py-2 text-center relative">
@@ -77,10 +77,16 @@ import strftime from "strftime";
                   class="hover:no-underline! hover:brightness-100!"
                 >
                   <div class="hover:bg-background-light text-xs px-2 pt-1 pb-2 group transition-colors duration-400">
-                    <h3 class="text-[1.35rem]!">{obj.title} </h3>
-                    {obj.note && (
-                      <div class="mb-1 text-sm text-gray-300">({obj.note})</div>
-                    )}
+                    <h3 class="text-[1.35rem]!">
+                      {obj.title}
+                      {obj.note && (
+                        <span class="mb-1 text-gray-400"> ({obj.note})</span>
+                      )}
+                    </h3>
+                    <div class="mb-1 text-sm text-gray-400">
+                      <span set:html={coloredDate(obj.datePublished)} />
+                    </div>
+
                     <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
                       {obj.description}
                     </div>
@@ -298,7 +304,7 @@ import strftime from "strftime";
                     </h3>
                     <div
                       class="mb-1 text-sm text-gray-300"
-                      set:html={coloredDate(obj.dateCreated)}
+                      set:html={coloredDate(obj.datePublished)}
                     />
                     <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
                       {obj.description}

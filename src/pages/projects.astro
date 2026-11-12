@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Links from "../components/Links.astro";
 import A from "../components/Anchor.astro";
-import { projects } from "../data.ts";
+import { coloredDate, projects } from "../data.ts";
 ---
 
 <Layout title="Projects">
@@ -14,7 +14,13 @@ import { projects } from "../data.ts";
     >
       <!-- First column -->
       <div class="border border-gray-600 bg-background/80">
-        <h1 class="text-center text-5xl! my-4!">Projects</h1>
+        <h1 class="text-center text-5xl! mt-4!">Projects</h1>
+        <div class="flex justify-center mb-4 text-gray-300 text-sm">
+          <div class="w-1/2 text-center">
+            They're not sorted by date, rather they're sorted by how proud I am
+            of each one
+          </div>
+        </div>
         <div
           class="[&>a>div]:border-t [&>a>div]:border-gray-700 [&>a>div]:border-b"
         >
@@ -33,7 +39,13 @@ import { projects } from "../data.ts";
                       </span>
                     )}
                   </h3>
-                  <span>{obj.description}</span>
+                  <div class="text-[0.95rem] text-gray-200 mb-1.5">
+                    <div
+                      class="text-sm text-gray-400 mb-2"
+                      set:html={coloredDate(obj.datePublished)}
+                    />
+                    {obj.description}
+                  </div>
                 </div>
               </A>
             ))
