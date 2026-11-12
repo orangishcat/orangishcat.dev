@@ -212,6 +212,9 @@ import strftime from "strftime";
                 <A href="https://osu.ppy.sh/">
                   <Img src={osuImage} />
                 </A>
+                <A href="https://www.celestegame.com/">
+                  <Img src={celesteImage} />
+                </A>
                 <A href="https://geometrydash.com/">
                   <Img src={geometryDashImage} />
                 </A>
@@ -242,9 +245,6 @@ import strftime from "strftime";
             <div>
               <h3>Games I want to try</h3>
               <div>
-                <A href="https://www.celestegame.com/">
-                  <Img src={celesteImage} />
-                </A>
                 <A href="http://oneshot-game.com/">
                   <Img src={oneshotImage} />
                 </A>
@@ -299,7 +299,7 @@ import strftime from "strftime";
                     <div
                       class="mb-1 text-sm text-gray-300"
                       set:html={coloredDate(obj.dateCreated)}
-                    ></div>
+                    />
                     <div class="text-[0.75rem] line-clamp-2 group-hover:line-clamp-none max-h-12 group-hover:max-h-60 transition-colors duration-400 ease-in-out text-gray-400 group-hover:text-white">
                       {obj.description}
                     </div>
